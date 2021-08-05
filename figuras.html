@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figuras Geométricas | Javascript Básico</title>
+  </head>
+  <body>
+    <header>
+      <h1>iHateMaths</h1>
+    </header>
+    <nav>
+      <button id="geometry">Geometry</button>
+      <button>Button</button>
+      <button>Button</button>
+    </nav>
+
+    <main>
+      <section class="card" id="square">
+        <div class="card_header">
+          <span><img src="" alt="" /></span>Square
+        </div>
+        <div class="card_body">
+            <form>
+                <div class="card_field" id="square_side">
+                    <label for="">Side</label>
+                    <input type="number" class="card_field">
+                    
+                </div>
+                <div class="card_field-computed" id = "square_area">
+                    <label for="">Area</label>
+                    <div class="card_field-computed_result"></div>
+                </div>
+                <div class="card_field-computed" id="square_perimeter">
+                    <label for="">Perimeter</label>
+                    <div class="card_field-computed_result"></div>
+                </div>
+            </form>
+        </div>
+      </section>
+
+      <section class="card" id="triangle">
+        <div class="card_header">
+          <span><img src="" alt="" /></span>Triangle
+        </div>
+        <div class="card_body">
+            <form>
+                <div class="card_field" id="triangle_sidea">
+                    <label for="">Side A</label>
+                    <input type="number" class="card_field">
+                </div>
+                <div class="card_field" id="triangle_sideb">
+                    <label for="">Side B</label>
+                    <input type="number" class="card_field">
+                </div>
+                <div class="card_field" id="triangle_sidec">
+                    <label for="">Side C</label>
+                    <input type="number" class="card_field">
+                </div>
+                <!-- <div class="card_field" id="triangle_height">
+                    <label for="">Height</label>
+                    <input type="number" class="card_field">
+                </div> -->
+
+                <div class="card_field-computed" id = "triangle_area">
+                    <label for="">Area</label>
+                    <div class="card_field-computed_result"></div>
+                </div>
+                <div class="card_field-computed" id="triangle_perimeter">
+                    <label for="">Perimeter</label>
+                    <div class="card_field-computed_result"></div>
+                </div>
+            </form>
+        </div>
+      </section>
+
+      <section class="card" id="circle">
+        <div class="card_header">
+          <span><img src="" alt="" /></span>Circle
+        </div>
+        <div class="card_body">
+            <form>
+                <div class="card_field" id="circle_radius">
+                    <label for="">Radius</label>
+                    <input type="number" class="card_field">
+                </div>
+                <!-- <div class="card_field" id="circle_perimeter">
+                    <label for="">Perimeter</label>
+                    <input type="number" class="card_field">
+                </div> -->
+
+                <div class="card_field-computed" id = "circle_area">
+                    <label for="">Area</label>
+                    <div class="card_field-computed_result"></div>
+                </div>
+                <div class="card_field-computed" id="circle_perimeter">
+                    <label for="">Perimeter</label>
+                    <div class="card_field-computed_result"></div>
+                </div>
+            </form>
+        </div>
+      </section>
+    </main>
+
+    <script defer src="./figuras.js"></script>
+  </body>
+</html>
