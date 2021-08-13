@@ -21,8 +21,8 @@ const cuadrado = {
   nodos: {
     card: document.querySelector('.card#square'),
     side: document.querySelector('.card_field#square_side input'),
-    area: document.querySelector('.card_field-computed#square_area').querySelector('div'),
-    perimeter: document.querySelector('.card_field-computed#square_perimeter').querySelector('div')
+    area: document.querySelector('.card_field-computed#square_area').querySelector('input'),
+    perimeter: document.querySelector('.card_field-computed#square_perimeter').querySelector('input')
   }
 }
 
@@ -51,8 +51,8 @@ const triangulo = {
     sideb: document.querySelector(".card#triangle").querySelector('.card_field#triangle_sideb input'),
     sidec: document.querySelector(".card#triangle").querySelector('.card_field#triangle_sidec input'),
     height: document.querySelector(".card#triangle").querySelector('.card_field#triangle_height input'),
-    area: document.querySelector(".card#triangle").querySelector('.card_field-computed#triangle_area').querySelector('div'),
-    perimeter: document.querySelector(".card#triangle").querySelector('.card_field-computed#triangle_perimeter').querySelector('div')
+    area: document.querySelector(".card#triangle").querySelector('.card_field-computed#triangle_area').querySelector('input'),
+    perimeter: document.querySelector(".card#triangle").querySelector('.card_field-computed#triangle_perimeter').querySelector('input')
   }
 };
 
@@ -73,8 +73,8 @@ const circulo = {
   nodos:{
     card: document.querySelector(".card#circle"),
     radius: document.querySelector('.card_field#circle_radius input'),
-    area: document.querySelector('.card_field-computed#circle_area').querySelector('div'),
-    perimeter: document.querySelector('.card_field-computed#circle_perimeter').querySelector('div')
+    area: document.querySelector('.card_field-computed#circle_area').querySelector('input'),
+    perimeter: document.querySelector('.card_field-computed#circle_perimeter').querySelector('input')
   }
 }
 
@@ -85,34 +85,34 @@ console.log([cuadrado, triangulo, circulo])
 cuadrado.nodos.card.addEventListener('input', () =>{
 
   if(cuadrado.nodos.side.value == ''){
-    cuadrado.nodos.area.textContent = ''
-    cuadrado.nodos.perimeter.textContent = ''
+    cuadrado.nodos.area.value = ''
+    cuadrado.nodos.perimeter.value = ''
   }
   if(cuadrado.nodos.side.value != ''){
-    cuadrado.nodos.area.textContent = cuadrado.operations.area(cuadrado.nodos.side.value).customFixed(2)
-    cuadrado.nodos.perimeter.textContent = cuadrado.operations.perimetro(cuadrado.nodos.side.value).customFixed(2)
+    cuadrado.nodos.area.value = cuadrado.operations.area(cuadrado.nodos.side.value).customFixed(2)
+    cuadrado.nodos.perimeter.value = cuadrado.operations.perimetro(cuadrado.nodos.side.value).customFixed(2)
   }
 })
 
 triangulo.nodos.card.addEventListener('input', () =>{
   if(triangulo.nodos.sidea.value == '' || triangulo.nodos.sideb.value == '' || triangulo.nodos.sidec.value == ''){
-    triangulo.nodos.area.textContent = ''
-    triangulo.nodos.perimeter.textContent = ''
+    triangulo.nodos.area.value = ''
+    triangulo.nodos.perimeter.value = ''
   }
   if(triangulo.nodos.sidea.value != '' & triangulo.nodos.sideb.value != '' && triangulo.nodos.sidec.value != ''){
-    triangulo.nodos.area.textContent = triangulo.operations.area([parseFloat(triangulo.nodos.sidea.value), parseFloat(triangulo.nodos.sideb.value), parseFloat(triangulo.nodos.sidec.value)]).customFixed(2)
-    triangulo.nodos.perimeter.textContent = triangulo.operations.perimetro([parseFloat(triangulo.nodos.sidea.value), parseFloat(triangulo.nodos.sideb.value), parseFloat(triangulo.nodos.sidec.value)]).customFixed(2)
+    triangulo.nodos.area.value = triangulo.operations.area([parseFloat(triangulo.nodos.sidea.value), parseFloat(triangulo.nodos.sideb.value), parseFloat(triangulo.nodos.sidec.value)]).customFixed(2)
+    triangulo.nodos.perimeter.value = triangulo.operations.perimetro([parseFloat(triangulo.nodos.sidea.value), parseFloat(triangulo.nodos.sideb.value), parseFloat(triangulo.nodos.sidec.value)]).customFixed(2)
   }
 })
 
 circulo.nodos.card.addEventListener('input', () =>{
   if(circulo.nodos.radius.value == ''){
-    circulo.nodos.area.textContent = ''
-    circulo.nodos.perimeter.textContent = ''
+    circulo.nodos.area.value = ''
+    circulo.nodos.perimeter.value = ''
   }
   if(circulo.nodos.radius.value != ''){
     console.log('a');
-    circulo.nodos.perimeter.textContent = circulo.operations.perimetro(parseFloat(circulo.nodos.radius.value)).customFixed(2)
-    circulo.nodos.area.textContent = circulo.operations.area(parseFloat(circulo.nodos.radius.value)).customFixed(2)
+    circulo.nodos.perimeter.value = circulo.operations.perimetro(parseFloat(circulo.nodos.radius.value)).customFixed(2)
+    circulo.nodos.area.value = circulo.operations.area(parseFloat(circulo.nodos.radius.value)).customFixed(2)
   }
 })
